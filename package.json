@@ -30,7 +30,7 @@
     "author": "andre-araujo <andreluis9214@gmail.com>",
     "license": "MIT",
     "scripts": {
-        "build": "./node_modules/.bin/babel src --out-dir ./",
+        "build": "./node_modules/.bin/babel src --out-dir ./dist",
         "commit": "git-cz",
         "lint:fix": "eslint ./src --fix",
         "lint": "eslint ./src",
@@ -49,7 +49,9 @@
         "eslint-plugin-import": "^2.9.0",
         "eslint-plugin-jsx-a11y": "^6.0.3",
         "eslint-plugin-react": "^7.7.0",
-        "jest": "^21.1.0"
+        "jest": "^21.1.0",
+        "prop-types": "^15.6.1",
+        "styled-jsx": "^2.2.6"
     },
     "config": {
         "commitizen": {
