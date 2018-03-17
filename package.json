@@ -1,12 +1,12 @@
 {
-    "name": "react-customizable-grid",
+    "name": "react-configurable-grid",
     "version": "1.0.0",
     "description": "A simple configurable react grid inspired on grid-styled and react-bootstrap",
     "repository": {
         "type": "git",
-        "url": "https://github.com/andre-araujo/react-customizable-grid"
+        "url": "https://github.com/andre-araujo/react-configurable-grid"
     },
-    "main": "index.js",
+    "main": "./dist/index.js",
     "keywords": [
         "react-grid",
         "react",
@@ -50,8 +50,7 @@
         "eslint-plugin-jsx-a11y": "^6.0.3",
         "eslint-plugin-react": "^7.7.0",
         "jest": "^21.1.0",
-        "prop-types": "^15.6.1",
-        "styled-jsx": "^2.2.6"
+        "prop-types": "^15.6.1"
     },
     "config": {
         "commitizen": {
@@ -71,5 +70,8 @@
                 "statements": 70
             }
         }
+    },
+    "dependencies": {
+        "styled-jsx": "^2.2.6"
     }
 }
