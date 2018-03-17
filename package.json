@@ -1,11 +1,12 @@
 {
-    "name": "react-grid",
-    "version": "0.1.5",
-    "description": "A simple react grid inspired on grid-styled and react-bootstrap",
+    "name": "react-customizable-grid",
+    "version": "1.0.0",
+    "description": "A simple configurable react grid inspired on grid-styled and react-bootstrap",
     "repository": {
         "type": "git",
-        "url": "https://github.com/andre-araujo/react-grid"
+        "url": "https://github.com/andre-araujo/react-customizable-grid"
     },
+    "main": "index.js",
     "keywords": [
         "react-grid",
         "react",
@@ -13,6 +14,9 @@
         "grid",
         "system",
         "grid-system",
+        "customizable",
+        "configurable",
+        "settings",
         "react-grid-system",
         "simple",
         "css",
@@ -35,10 +39,16 @@
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
+        "babel-eslint": "^8.2.2",
         "babel-preset-env": "^1.6.0",
         "babel-preset-react": "^6.24.1",
         "commitizen": "^2.9.6",
         "cz-conventional-changelog": "^2.0.0",
+        "eslint": "^4.19.0",
+        "eslint-config-airbnb": "^16.1.0",
+        "eslint-plugin-import": "^2.9.0",
+        "eslint-plugin-jsx-a11y": "^6.0.3",
+        "eslint-plugin-react": "^7.7.0",
         "jest": "^21.1.0"
     },
     "config": {
