@@ -1,0 +1,63 @@
+{
+    "name": "react-grid",
+    "version": "0.1.5",
+    "description": "A simple react grid inspired on grid-styled and react-bootstrap",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/andre-araujo/react-grid"
+    },
+    "keywords": [
+        "react-grid",
+        "react",
+        "reactjs",
+        "grid",
+        "system",
+        "grid-system",
+        "react-grid-system",
+        "simple",
+        "css",
+        "layout",
+        "col",
+        "column",
+        "columns",
+        "row",
+        "rows"
+    ],
+    "author": "andre-araujo <andreluis9214@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "build": "./node_modules/.bin/babel src --out-dir ./",
+        "commit": "git-cz",
+        "lint:fix": "eslint ./src --fix",
+        "lint": "eslint ./src",
+        "test": "jest --no-cache",
+        "test:coverage": "jest --coverage"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-react": "^6.24.1",
+        "commitizen": "^2.9.6",
+        "cz-conventional-changelog": "^2.0.0",
+        "jest": "^21.1.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "jest": {
+        "verbose": true,
+        "transformIgnorePatterns": [
+            "/node_modules/"
+        ],
+        "coverageThreshold": {
+            "global": {
+                "branches": 70,
+                "functions": 70,
+                "lines": 70,
+                "statements": 70
+            }
+        }
+    }
+}
