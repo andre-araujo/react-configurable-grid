@@ -1,5 +1,3 @@
-# React Customizable Grid
-(https://www.npmjs.com/package/react-customizable-grid)
-[![license](https://img.shields.io/github/license/andre-araujo/react-customizable-grid.svg)]()
+# React Configurable Grid
 
-A simple react grid inspired on grid-styled and react-bootstrap with open settings.
+A simple configurable grid for react inspired on grid-styled and react-bootstrap with open settings.
