@@ -3,7 +3,7 @@ import { oneOfType, number, string, node } from "prop-types";
 
 import styles, { colClasses } from "./styles";
 
-function Col({ xs, sm, md, lg, mt, mr, mb, ml, className, children }) {
+function Col({ xs, sm, md, lg, xl, mt, mr, mb, ml, className, children }) {
   const classes = [
     className
   ];
@@ -19,6 +19,9 @@ function Col({ xs, sm, md, lg, mt, mr, mb, ml, className, children }) {
   }
   if (lg) {
     classes.push(`col-lg-${lg}`);
+  }
+  if (xl) {
+    classes.push(`col-lg-${xl}`);
   }
 
   return (
@@ -42,6 +45,7 @@ Col.defaultProps = {
   sm: null,
   md: null,
   lg: null,
+  xl: null,
   mt: 0,
   mr: 0,
   mb: 0,
@@ -56,6 +60,7 @@ Col.propTypes = {
   sm: numberOrString,
   md: numberOrString,
   lg: numberOrString,
+  xl: numberOrString,
   mt: numberOrString,
   mr: numberOrString,
   mb: numberOrString,
