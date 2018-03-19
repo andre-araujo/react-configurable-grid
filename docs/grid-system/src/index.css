@@ -1,5 +1,15 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 100px;
   font-family: sans-serif;
+}
+
+.outer-col {
+  background: red;
+}
+
+.inner-col {
+  height: 40px;
+  width: 100%;
+  background: blue;
 }

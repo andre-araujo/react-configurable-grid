@@ -1,9 +1,12 @@
+import React from 'react';
 import { oneOfType, number, string, node } from "prop-types";
 
 import styles, { colClasses } from "./styles";
 
-function Col({ xs, sm, md, lg, mt, mr, mb, ml, children }) {
-  const classes = [];
+function Col({ xs, sm, md, lg, mt, mr, mb, ml, className, children }) {
+  const classes = [
+    className
+  ];
 
   if (xs) {
     classes.push(`col-xs-${xs}`);
@@ -42,7 +45,8 @@ Col.defaultProps = {
   mt: 0,
   mr: 0,
   mb: 0,
-  ml: 0
+  ml: 0,
+  className: null
 };
 
 const numberOrString = oneOfType([number, string]);
@@ -56,6 +60,7 @@ Col.propTypes = {
   mr: numberOrString,
   mb: numberOrString,
   ml: numberOrString,
+  className: string,
   children: node.isRequired
 };
 

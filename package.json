@@ -1,6 +1,6 @@
 {
     "name": "react-configurable-grid",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "A simple configurable react grid inspired on grid-styled and react-bootstrap",
     "repository": {
         "type": "git",
@@ -72,6 +72,7 @@
         }
     },
     "dependencies": {
+        "react": "^16.2.0",
         "styled-jsx": "^2.2.6"
     }
 }
