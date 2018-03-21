@@ -41,8 +41,6 @@ export default MyComponent;
 | wrap | flex-wrap |
 | align | align-items |
 | justify | justify-content |
-| mt | margin top |
-| mb | margin bottom |
 | className | className |
 
 ### Col
@@ -54,8 +52,6 @@ export default MyComponent;
 | md | medium cols |
 | lg | large cols |
 | xl | extra large cols |
-| mt | margin top |
-| mb | margin bottom |
 | className | className |
 
 ### Default media queries
@@ -67,3 +63,39 @@ export default MyComponent;
 | md | 768px or more |
 | lg | 992px or more |
 | xl | 1200px or more |
+
+
+## Custom configuration
+
+To use custom breakpoints or custom gutter, just execute configureGrid with config params before your App is mounted;
+
+```javascript
+import React from 'react';
+import { Row, Col, configureGrid } from 'react-configurable-grid';
+import OtherComponent from './OtherComponent';
+
+configureGrid({
+    xs: "300px",
+    sm: "576px",
+    md: "768px",
+    lg: "992px",
+    xl: "1200px"
+    gutter: "60px"
+});
+
+function App() {
+    return (
+        <section>
+            <h1>My component</h1>
+            <Row>
+                <Col lg={2}>content 1</Col>
+                <Col lg={10}>content 2</Col>
+            <Row>
+            <OtherComponent />
+        </section>
+    );
+}
+
+export default App;
+
+```

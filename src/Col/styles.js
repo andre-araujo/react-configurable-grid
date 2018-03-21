@@ -1,8 +1,12 @@
-import css from "styled-jsx/css";
-import { media, gutter } from "../constants";
+import { media, halfGutter } from "../config";
+import formatStyles from "../utils/formatStyles";
 
-function gerenateColClasses() {
-  let classes = "";
+function gerenateColStyles() {
+  let styles = `
+    .rcg-col {
+      padding: 0_${halfGutter};
+    }
+  `;
   const mediaKeys = Object.keys(media);
 
   for (let i = 0; mediaKeys[i]; i++) {
@@ -11,10 +15,11 @@ function gerenateColClasses() {
       const currentValue = media[currentMedia];
       const maxWidth = j / 12 * 100;
 
-      classes += `
-        @media screen and (min-width: ${currentValue}) {
-          .col-${currentMedia}-${j} {
+      styles += `
+        @media (min-width: ${currentValue}) {
+          .rcg-col-${currentMedia}-${j} {
             max-width: ${maxWidth}%;
+            -ms-flex-preferred-size: ${maxWidth}%;
             flex-basis: ${maxWidth}%;
           }
         }
@@ -22,13 +27,7 @@ function gerenateColClasses() {
     }
   }
 
-  return classes;
+  return formatStyles(styles);
 }
 
-export const colClasses = gerenateColClasses();
-
-export default css`
-  div {
-    padding: 0 ${gutter};
-  }
-`;
+export default gerenateColStyles;

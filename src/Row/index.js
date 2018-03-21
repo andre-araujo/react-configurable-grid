@@ -1,21 +1,29 @@
 import React from 'react';
 import { oneOfType, number, string, node } from "prop-types";
 
-import styles from "./styles";
+import gerenateRowStyles from "./styles";
+import { appendStyles } from '../utils/styleUtils';
 
-function Row({ wrap, align, justify, mt, mb, className, children }) {
+function Row({ wrap, align, justify, className, children, ...props }) {
+  const classes = [
+    'rcg-row',
+    className
+  ];
+
+  if (wrap) {
+    classes.push(`rcg-row-wrap--${wrap}`);
+  }
+  if (align) {
+    classes.push(`rcg-row-align--${align}`);
+  }
+  if (justify) {
+    classes.push(`rcg-row-justify--${justify}`);
+  }
+
+  appendStyles('row', gerenateRowStyles());
+
   return (
-    <div className={className}>
-      <style jsx>{styles}</style>
-      <style jsx>{`
-        div {
-          flex-wrap: ${wrap};
-          align-items: ${align};
-          justify-content: ${justify};
-          margin-top: ${mt};
-          margin-bottom: ${mb};
-        }
-      `}</style>
+    <div className={classes.join(" ")} {...props}>
       {children}
     </div>
   );
@@ -25,8 +33,6 @@ Row.defaultProps = {
   wrap: 'nowrap',
   align: 'stretch',
   justify: 'flex-start',
-  mt: 0,
-  mb: 0,
   className: null
 };
 
@@ -35,8 +41,6 @@ Row.propTypes = {
   align: string,
   justify: string,
   className: string,
-  mt: oneOfType([number, string]),
-  mb: oneOfType([number, string]),
   children: node.isRequired
 };
 

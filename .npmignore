@@ -13,3 +13,4 @@ coverage
 *.spec.js
 .editorconfig
 .eslintignore
+node_modules
