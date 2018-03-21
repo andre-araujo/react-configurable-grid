@@ -1,6 +1,6 @@
 {
     "name": "react-configurable-grid",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "A simple configurable react grid inspired on grid-styled and react-bootstrap",
     "repository": {
         "type": "git",
@@ -40,6 +40,7 @@
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-eslint": "^8.2.2",
+        "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
         "babel-preset-env": "^1.6.0",
         "babel-preset-react": "^6.24.1",
         "commitizen": "^2.9.6",

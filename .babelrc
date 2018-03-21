@@ -5,6 +5,7 @@
   ],
   "plugins": [
     [
+      "transform-react-remove-prop-types",
       "styled-jsx/babel",
       {
         "optimizeForSpeed": false
