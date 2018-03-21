@@ -41,6 +41,8 @@ export default MyComponent;
 | wrap | flex-wrap |
 | align | align-items |
 | justify | justify-content |
+| mt | margin top |
+| mb | margin bottom |
 | className | className |
 
 ### Col
@@ -51,11 +53,9 @@ export default MyComponent;
 | sm | small cols |
 | md | medium cols |
 | lg | large cols |
-| xg | extra large cols |
+| xl | extra large cols |
 | mt | margin top |
-| mr | margin right |
 | mb | margin bottom |
-| ml | margin left |
 | className | className |
 
 ### Default media queries
