@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, node } from "prop-types";
+import { oneOfType, number, string, node } from "prop-types";
 
 import styles from "./styles";
 
@@ -12,15 +12,14 @@ function Row({ wrap, align, justify, mt, mb, className, children }) {
           flex-wrap: ${wrap};
           align-items: ${align};
           justify-content: ${justify};
-          margin: ${mt} 0 ${mb};
+          margin-top: ${mt};
+          margin-bottom: ${mb};
         }
       `}</style>
       {children}
     </div>
   );
 }
-
-const numberOrString = oneOfType([number, string]);
 
 Row.defaultProps = {
   wrap: 'nowrap',
@@ -36,8 +35,8 @@ Row.propTypes = {
   align: string,
   justify: string,
   className: string,
-  mt: numberOrString,
-  mb: numberOrString,
+  mt: oneOfType([number, string]),
+  mb: oneOfType([number, string]),
   children: node.isRequired
 };
 

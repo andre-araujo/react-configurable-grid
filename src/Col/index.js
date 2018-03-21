@@ -53,18 +53,16 @@ Col.defaultProps = {
   className: null
 };
 
-const numberOrString = oneOfType([number, string]);
-
 Col.propTypes = {
-  xs: numberOrString,
-  sm: numberOrString,
-  md: numberOrString,
-  lg: numberOrString,
-  xl: numberOrString,
-  mt: numberOrString,
-  mr: numberOrString,
-  mb: numberOrString,
-  ml: numberOrString,
+  xs: oneOfType([number, string]),
+  sm: oneOfType([number, string]),
+  md: oneOfType([number, string]),
+  lg: oneOfType([number, string]),
+  xl: oneOfType([number, string]),
+  mt: oneOfType([number, string]),
+  mr: oneOfType([number, string]),
+  mb: oneOfType([number, string]),
+  ml: oneOfType([number, string]),
   className: string,
   children: node.isRequired
 };

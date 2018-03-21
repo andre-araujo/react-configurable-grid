@@ -4,12 +4,7 @@
     "react"
   ],
   "plugins": [
-    [
-      "transform-react-remove-prop-types",
-      "styled-jsx/babel",
-      {
-        "optimizeForSpeed": false
-      }
-    ]
+    "transform-react-remove-prop-types",
+    "styled-jsx/babel"
   ]
 }
