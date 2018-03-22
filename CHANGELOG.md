@@ -1,3 +1,7 @@
+## 2.0.3 (March 22, 2018)
+
+- Fix grid unexpected break line on row wrap="wrap"
+
 ## 2.0.2 (March 21, 2018)
 
 - Fix missing module

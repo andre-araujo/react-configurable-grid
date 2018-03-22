@@ -20,6 +20,8 @@ const justifyTypes = alignTypes;
 export default function gerenateRowStyles() {
   let styles = `
     .rcg-row {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;

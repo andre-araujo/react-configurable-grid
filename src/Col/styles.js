@@ -4,6 +4,8 @@ import formatStyles from "../utils/formatStyles";
 function gerenateColStyles() {
   let styles = `
     .rcg-col {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
       padding: 0_${halfGutter};
     }
   `;
