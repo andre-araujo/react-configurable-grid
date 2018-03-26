@@ -105,4 +105,4 @@ export default App;
 
 ## Special thanks
 
-@malbernaz
+[@malbernaz](https://github.com/malbernaz/)
