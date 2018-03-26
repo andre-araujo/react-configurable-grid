@@ -1,7 +1,7 @@
 const staticStyles = [];
 
 export function appendStyles(hash, css, dynamic) {
-  if (!dynamic && staticStyles.indexOf(hash) !== -1) {
+  if (typeof window === 'undefined' || (!dynamic && staticStyles.indexOf(hash) !== -1)) {
     return;
   }
 

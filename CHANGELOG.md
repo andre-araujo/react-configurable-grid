@@ -1,3 +1,7 @@
+## 2.0.4 (March 23, 2018)
+
+- Fix server side rendering
+
 ## 2.0.3 (March 22, 2018)
 
 - Fix grid unexpected break line on row wrap="wrap"
