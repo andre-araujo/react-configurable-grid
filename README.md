@@ -1,4 +1,6 @@
 # React Configurable Grid
+[![npm](https://img.shields.io/npm/dt/react-configurable-grid.svg)]()
+[![GitHub tag](https://img.shields.io/github/tag/andre-araujo/react-configurable-grid.svg)]()
 
 A simple configurable grid for react inspired on [grid-styled](https://github.com/jxnblk/grid-styled) and [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap) API, but, with open settings.
 
@@ -31,39 +33,6 @@ function MyComponent() {
 export default MyComponent;
 
 ```
-
-## API Reference
-
-### Row
-
-| prop | description |
-| --------- | ----------- |
-| wrap | flex-wrap |
-| align | align-items |
-| justify | justify-content |
-| className | className |
-
-### Col
-
-| prop | description |
-| --------- | ----------- |
-| xs | extra small cols |
-| sm | small cols |
-| md | medium cols |
-| lg | large cols |
-| xl | extra large cols |
-| className | className |
-
-### Default media queries
-
-| prop | description |
-| --------- | ----------- |
-| xs | 0px or more |
-| sm | 576px or more |
-| md | 768px or more |
-| lg | 992px or more |
-| xl | 1200px or more |
-
 
 ## Custom configuration
 
@@ -99,3 +68,35 @@ function App() {
 export default App;
 
 ```
+
+## API Reference
+
+### Row
+
+| prop | description |
+| --------- | ----------- |
+| wrap | flex-wrap |
+| align | align-items |
+| justify | justify-content |
+| className | className |
+
+### Col
+
+| prop | description |
+| --------- | ----------- |
+| xs | extra small cols |
+| sm | small cols |
+| md | medium cols |
+| lg | large cols |
+| xl | extra large cols |
+| className | className |
+
+### Default media queries
+
+| prop | description |
+| --------- | ----------- |
+| xs | 0px or more |
+| sm | 576px or more |
+| md | 768px or more |
+| lg | 992px or more |
+| xl | 1200px or more |
