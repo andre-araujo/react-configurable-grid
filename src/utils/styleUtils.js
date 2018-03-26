@@ -14,7 +14,7 @@ export function appendStyles(hash, css, dynamic) {
   tag.setAttribute(`data-grid-${hash}`, '')
 
   if (css) {
-    tag.appendChild(document.createTextNode(css))
+    tag.appendChild(document.createTextNode(css()))
   }
 
   const head = document.head || document.getElementsByTagName('head')[0]

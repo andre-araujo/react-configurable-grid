@@ -1,57 +1,27 @@
 import React from 'react';
-import { oneOfType, number, string, node } from "prop-types";
 
 import gerenateColStyles from "./styles";
 import { appendStyles } from '../utils/styleUtils';
+import { medias } from '../config';
 
-function Col({ xs, sm, md, lg, xl, className, children, ...props }) {
+export default function Col(props) {
   const classes = [
     'rcg-col',
-    className
+    props.className
   ];
 
-  if (xs) {
-    classes.push(`rcg-col-xs-${xs}`);
-  }
-  if (sm) {
-    classes.push(`rcg-col-sm-${sm}`);
-  }
-  if (md) {
-    classes.push(`rcg-col-md-${md}`);
-  }
-  if (lg) {
-    classes.push(`rcg-col-lg-${lg}`);
-  }
-  if (xl) {
-    classes.push(`rcg-col-lg-${xl}`);
+  const newProps = Object.assign({}, props);
+
+  for (const key of medias) {
+    if (props[key]) {
+      classes.push(`rcg-col-${key}-${props[key]}`);
+      delete newProps[key];
+    }
   }
 
-  appendStyles('column', gerenateColStyles());
+  appendStyles('column', gerenateColStyles);
 
   return (
-    <div className={classes.join(" ")} {...props}>
-      {children}
-    </div>
+    React.createElement("div", Object.assign({}, newProps, { className: classes.join(" ") }), props.children)
   );
 }
-
-Col.defaultProps = {
-  xs: null,
-  sm: null,
-  md: null,
-  lg: null,
-  xl: null,
-  className: null
-};
-
-Col.propTypes = {
-  xs: oneOfType([number, string]),
-  sm: oneOfType([number, string]),
-  md: oneOfType([number, string]),
-  lg: oneOfType([number, string]),
-  xl: oneOfType([number, string]),
-  className: string,
-  children: node.isRequired
-};
-
-export default Col;

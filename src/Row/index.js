@@ -1,31 +1,33 @@
 import React from 'react';
-import { oneOfType, number, string, node } from "prop-types";
 
 import gerenateRowStyles from "./styles";
 import { appendStyles } from '../utils/styleUtils';
 
-function Row({ wrap, align, justify, className, children, ...props }) {
+const rowModifiers = [
+  'wrap',
+  'align',
+  'justify'
+]
+
+function Row(props) {
   const classes = [
     'rcg-row',
-    className
+    props.className
   ];
 
-  if (wrap) {
-    classes.push(`rcg-row-wrap--${wrap}`);
-  }
-  if (align) {
-    classes.push(`rcg-row-align--${align}`);
-  }
-  if (justify) {
-    classes.push(`rcg-row-justify--${justify}`);
+  const newProps = Object.assign({}, props);
+
+  for (const key of rowModifiers) {
+    if (props[key]) {
+      classes.push(`rcg-row-${key}--${props[key]}`);
+      delete newProps[key];
+    }
   }
 
-  appendStyles('row', gerenateRowStyles());
+  appendStyles('row', gerenateRowStyles);
 
   return (
-    <div className={classes.join(" ")} {...props}>
-      {children}
-    </div>
+    React.createElement("div", Object.assign({}, newProps, { className: classes.join(" ") }), props.children)
   );
 }
 
@@ -34,14 +36,6 @@ Row.defaultProps = {
   align: 'stretch',
   justify: 'flex-start',
   className: null
-};
-
-Row.propTypes = {
-  wrap: string,
-  align: string,
-  justify: string,
-  className: string,
-  children: node.isRequired
 };
 
 export default Row;

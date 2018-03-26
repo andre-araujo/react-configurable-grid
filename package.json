@@ -7,6 +7,7 @@
         "url": "https://github.com/andre-araujo/react-configurable-grid"
     },
     "main": "./dist/index.js",
+    "module": "./dist/index.m.js",
     "keywords": [
         "react-grid",
         "react",
@@ -30,8 +31,9 @@
     "author": "andre-araujo <andreluis9214@gmail.com>",
     "license": "MIT",
     "scripts": {
-        "build": "./node_modules/.bin/babel src --out-dir ./dist",
+        "build": "microbundle src/index.js outdir --strict --sourcemap=false --external=react",
         "commit": "git-cz",
+        "publish": "npm run build && npm publish",
         "lint:fix": "eslint ./src --fix",
         "lint": "eslint ./src",
         "test": "jest --no-cache",
@@ -40,8 +42,6 @@
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-eslint": "^8.2.2",
-        "babel-plugin-transform-object-rest-spread": "^6.26.0",
-        "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
         "babel-preset-env": "^1.6.0",
         "babel-preset-react": "^6.24.1",
         "commitizen": "^2.9.6",
@@ -52,7 +52,7 @@
         "eslint-plugin-jsx-a11y": "^6.0.3",
         "eslint-plugin-react": "^7.7.0",
         "jest": "^21.1.0",
-        "prop-types": "^15.6.1"
+        "microbundle": "^0.4.4"
     },
     "config": {
         "commitizen": {
@@ -72,5 +72,8 @@
                 "statements": 70
             }
         }
+    },
+    "peerDependencies": {
+        "react": "^16.2.0"
     }
 }

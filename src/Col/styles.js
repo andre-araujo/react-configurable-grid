@@ -1,14 +1,13 @@
 import { media, halfGutter } from "../config";
-import formatStyles from "../utils/formatStyles";
 
 function gerenateColStyles() {
-  let styles = `
-    .rcg-col {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 0_${halfGutter};
-    }
-  `;
+  let styles =
+    '.rcg-col{' +
+    '-webkit-box-sizing:border-box;' +
+    'box-sizing:border-box;' +
+    'padding:0 ' + halfGutter +
+    '}';
+
   const mediaKeys = Object.keys(media);
 
   for (let i = 0; mediaKeys[i]; i++) {
@@ -17,19 +16,17 @@ function gerenateColStyles() {
       const currentValue = media[currentMedia];
       const maxWidth = j / 12 * 100;
 
-      styles += `
-        @media (min-width: ${currentValue}) {
-          .rcg-col-${currentMedia}-${j} {
-            max-width: ${maxWidth}%;
-            -ms-flex-preferred-size: ${maxWidth}%;
-            flex-basis: ${maxWidth}%;
-          }
-        }
-      `;
+      styles +=
+        '@media(min-width:' + currentValue +
+        '){.rcg-col-' + currentMedia + '-' + j +
+        '{max-width:' + maxWidth +
+        '%;-ms-flex-preferred-size:' + maxWidth +
+        '%;flex-basis:' + maxWidth +
+        '%}}';
     }
   }
 
-  return formatStyles(styles);
+  return styles;
 }
 
 export default gerenateColStyles;
