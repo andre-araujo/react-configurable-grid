@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-configurable-grid'
+import { Row, Col, configureGrid } from 'react-configurable-grid'
+
+configureGrid({
+  xs: "300px",
+  sm: "576px",
+  md: "768px",
+  lg: "992px",
+  xl: "1200px",
+  gutter: "100px"
+});
 
 function App() {
   return (

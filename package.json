@@ -1,6 +1,6 @@
 {
     "name": "react-configurable-grid",
-    "version": "2.0.5",
+    "version": "2.0.6",
     "description": "A simple configurable react grid inspired on grid-styled and react-bootstrap",
     "repository": {
         "type": "git",
@@ -33,7 +33,7 @@
     "scripts": {
         "build": "microbundle src/index.js outdir --strict --sourcemap=false --external=react",
         "commit": "git-cz",
-        "publish": "npm run build && npm publish",
+        "build:publish": "npm run build && npm publish",
         "lint:fix": "eslint ./src --fix",
         "lint": "eslint ./src",
         "test": "jest --no-cache",

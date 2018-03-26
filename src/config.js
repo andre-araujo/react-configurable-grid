@@ -11,8 +11,10 @@ export let medias = ['xs', 'sm', 'md', 'lg', 'xl'];
 export let halfGutter = "15px";
 
 export default function configureGrid(configs) {
-  for (let i = 0, media = medias[i]; media; i++) {
-    configs[media] && (media[media] = configs[media]);
+  for (let i = 0; medias[i]; i++) {
+    if (configs[medias[i]]) {
+      media[medias[i]] = configs[medias[i]]
+    }
   }
 
   if (typeof configs.gutter === 'string') {

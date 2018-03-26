@@ -1,3 +1,7 @@
+## 2.0.6 (March 26, 2018)
+
+- Fix configureGrid breaking on 2.0.5
+
 ## 2.0.5 (March 26, 2018)
 
 - Add minification and bundle.
