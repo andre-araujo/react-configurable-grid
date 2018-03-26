@@ -4,6 +4,8 @@
 
 A simple configurable grid for react inspired on [grid-styled](https://github.com/jxnblk/grid-styled) and [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap) API, but, with open settings.
 
+**1.05k gz** only
+
 ## Usage
 
 React Configurable Grid is as simple as using bootstrap grid-system, where you have rows, cols and container classes to wrap components and align as you please, removing alignment and size adustment from their responsability.
@@ -100,3 +102,7 @@ export default App;
 | md | 768px or more |
 | lg | 992px or more |
 | xl | 1200px or more |
+
+## Special thanks
+
+@malbernaz

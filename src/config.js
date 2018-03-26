@@ -1,6 +1,3 @@
-import gerenateColStyles from "./Col/styles";
-import gerenateRowStyles from "./Row/styles";
-
 export let media = {
   xs: "0px",
   sm: "576px",
@@ -9,14 +6,14 @@ export let media = {
   xl: "1200px"
 };
 
+export let medias = ['xs', 'sm', 'md', 'lg', 'xl'];
+
 export let halfGutter = "15px";
 
 export default function configureGrid(configs) {
-  configs.xs && (media.xs = configs.xs);
-  configs.sm && (media.sm = configs.sm);
-  configs.md && (media.md = configs.md);
-  configs.lg && (media.lg = configs.lg);
-  configs.xl && (media.xl = configs.xl);
+  for (let i = 0, media = medias[i]; media; i++) {
+    configs[media] && (media[media] = configs[media]);
+  }
 
   if (typeof configs.gutter === 'string') {
     const newHalfGutter = configs.gutter
