@@ -1,3 +1,8 @@
+## 2.0.5 (March 26, 2018)
+
+- Add minification and bundle.
+- General performance optimization.
+
 ## 2.0.4 (March 23, 2018)
 
 - Fix server side rendering
