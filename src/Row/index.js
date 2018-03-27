@@ -32,7 +32,7 @@ function Row(props) {
 }
 
 Row.defaultProps = {
-  wrap: 'nowrap',
+  wrap: 'wrap',
   align: 'stretch',
   justify: 'flex-start',
   className: null

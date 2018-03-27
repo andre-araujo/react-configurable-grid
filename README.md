@@ -75,12 +75,12 @@ export default App;
 
 ### Row
 
-| prop | description |
-| --------- | ----------- |
-| wrap | flex-wrap |
-| align | align-items |
-| justify | justify-content |
-| className | className |
+| prop | description | default |
+| --------- | ----------- | ----------- |
+| wrap | flex-wrap | wrap |
+| align | align-items | stretch |
+| justify | justify-content | flex-start |
+| className | className | - |
 
 ### Col
 
