@@ -1,3 +1,7 @@
+## 2.1.0 (April 09, 2018)
+
+- Add Server-Side Rendering.
+
 ## 2.0.7 (March 27, 2018)
 
 - Fix unexpected default `flex-wrap: nowrap` on Row component, flex wrap now defaults to `flex-wrap: wrap`.
