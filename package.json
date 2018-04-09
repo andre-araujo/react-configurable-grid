@@ -1,79 +1,79 @@
 {
-    "name": "react-configurable-grid",
-    "version": "2.0.7",
-    "description": "A simple configurable react grid inspired on grid-styled and react-bootstrap",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/andre-araujo/react-configurable-grid"
-    },
-    "main": "./dist/index.js",
-    "module": "./dist/index.m.js",
-    "keywords": [
-        "react-grid",
-        "react",
-        "reactjs",
-        "grid",
-        "system",
-        "grid-system",
-        "customizable",
-        "configurable",
-        "settings",
-        "react-grid-system",
-        "simple",
-        "css",
-        "layout",
-        "col",
-        "column",
-        "columns",
-        "row",
-        "rows"
-    ],
-    "author": "andre-araujo <andreluis9214@gmail.com>",
-    "license": "MIT",
-    "scripts": {
-        "build": "microbundle src/index.js outdir --strict --sourcemap=false --external=react",
-        "commit": "git-cz",
-        "build:publish": "npm run build && npm publish",
-        "lint:fix": "eslint ./src --fix",
-        "lint": "eslint ./src",
-        "test": "jest --no-cache",
-        "test:coverage": "jest --coverage"
-    },
-    "devDependencies": {
-        "babel-cli": "^6.26.0",
-        "babel-eslint": "^8.2.2",
-        "babel-preset-env": "^1.6.0",
-        "babel-preset-react": "^6.24.1",
-        "commitizen": "^2.9.6",
-        "cz-conventional-changelog": "^2.0.0",
-        "eslint": "^4.19.0",
-        "eslint-config-airbnb": "^16.1.0",
-        "eslint-plugin-import": "^2.9.0",
-        "eslint-plugin-jsx-a11y": "^6.0.3",
-        "eslint-plugin-react": "^7.7.0",
-        "jest": "^21.1.0",
-        "microbundle": "^0.4.4"
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
-    },
-    "jest": {
-        "verbose": true,
-        "transformIgnorePatterns": [
-            "/node_modules/"
-        ],
-        "coverageThreshold": {
-            "global": {
-                "branches": 70,
-                "functions": 70,
-                "lines": 70,
-                "statements": 70
-            }
-        }
-    },
-    "peerDependencies": {
-        "react": "^16.2.0"
+  "name": "react-configurable-grid",
+  "version": "2.1.0",
+  "description": "A simple configurable react grid inspired on grid-styled and react-bootstrap",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andre-araujo/react-configurable-grid"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.m.js",
+  "keywords": [
+    "react-grid",
+    "react",
+    "reactjs",
+    "grid",
+    "system",
+    "grid-system",
+    "customizable",
+    "configurable",
+    "settings",
+    "react-grid-system",
+    "simple",
+    "css",
+    "layout",
+    "col",
+    "column",
+    "columns",
+    "row",
+    "rows"
+  ],
+  "author": "andre-araujo <andreluis9214@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "microbundle src/index.js outdir --strict --sourcemap=false --external=react",
+    "commit": "git-cz",
+    "build:publish": "npm run build && npm publish",
+    "lint:fix": "eslint ./src --fix",
+    "lint": "eslint ./src",
+    "test": "jest --no-cache",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "eslint": "^4.19.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^21.1.0",
+    "microbundle": "^0.4.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "jest": {
+    "verbose": true,
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 70,
+        "functions": 70,
+        "lines": 70,
+        "statements": 70
+      }
+    }
+  },
+  "peerDependencies": {
+    "react": "*"
+  }
 }

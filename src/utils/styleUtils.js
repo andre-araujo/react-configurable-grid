@@ -1,25 +1,12 @@
-const staticStyles = [];
+export function createStyleTag(hashName, css) {
+  return '<style type="text/css" ' + hashName + '>' + css + '</style>';
+}
 
-export function appendStyles(hash, css, dynamic) {
-  if (typeof window === 'undefined' || (!dynamic && staticStyles.indexOf(hash) !== -1)) {
+export function appendStyles(hashName, styleTag) {
+  if (typeof window === 'undefined' || document.querySelector(`[${hashName}]`)) {
     return;
   }
 
-  if (!dynamic) {
-    staticStyles.push(hash)
-  }
-
-  const tag = document.createElement('style');
-  tag.type = 'text/css'
-  tag.setAttribute(`data-grid-${hash}`, '')
-
-  if (css) {
-    tag.appendChild(document.createTextNode(css()))
-  }
-
-  const head = document.head || document.getElementsByTagName('head')[0]
-
-  head.appendChild(tag);
-
-  return tag
+  const head = document.head || document.getElementsByTagName('head')[0];
+  head.insertAdjacentHTML('beforeend', styleTag);
 }

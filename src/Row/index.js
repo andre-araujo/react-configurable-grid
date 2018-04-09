@@ -1,8 +1,5 @@
 import React from 'react';
 
-import gerenateRowStyles from "./styles";
-import { appendStyles } from '../utils/styleUtils';
-
 const rowModifiers = [
   'wrap',
   'align',
@@ -23,8 +20,6 @@ function Row(props) {
       delete newProps[key];
     }
   }
-
-  appendStyles('row', gerenateRowStyles);
 
   return (
     React.createElement("div", Object.assign({}, newProps, { className: classes.join(" ") }), props.children)
