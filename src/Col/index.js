@@ -1,14 +1,14 @@
 import React from 'react';
 
-import gerenateColStyles from "./styles";
-import { appendStyles } from '../utils/styleUtils';
-import { medias } from '../config';
+import configureGrid, { medias, gridStarted } from '../config';
 
-export default function Col(props) {
+function Col(props) {
   const classes = [
     'rcg-col',
     props.className
   ];
+
+  if (!gridStarted) configureGrid();
 
   const newProps = Object.assign({}, props);
 
@@ -19,9 +19,16 @@ export default function Col(props) {
     }
   }
 
-  appendStyles('column', gerenateColStyles);
+  delete newProps.component;
 
   return (
-    React.createElement("div", Object.assign({}, newProps, { className: classes.join(" ") }), props.children)
+    React.createElement(props.component, Object.assign({}, newProps, { className: classes.join(" ") }), props.children)
   );
 }
+
+Row.defaultProps = {
+  component: 'div',
+  className: null
+};
+
+export default Col;

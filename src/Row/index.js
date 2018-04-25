@@ -1,8 +1,5 @@
 import React from 'react';
 
-import gerenateRowStyles from "./styles";
-import { appendStyles } from '../utils/styleUtils';
-
 const rowModifiers = [
   'wrap',
   'align',
@@ -24,10 +21,10 @@ function Row(props) {
     }
   }
 
-  appendStyles('row', gerenateRowStyles);
+  delete newProps.component;
 
   return (
-    React.createElement("div", Object.assign({}, newProps, { className: classes.join(" ") }), props.children)
+    React.createElement(props.component, Object.assign({}, newProps, { className: classes.join(" ") }), props.children)
   );
 }
 
@@ -35,6 +32,7 @@ Row.defaultProps = {
   wrap: 'wrap',
   align: 'stretch',
   justify: 'flex-start',
+  component: 'div',
   className: null
 };
 

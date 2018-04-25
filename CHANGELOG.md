@@ -1,3 +1,11 @@
+## 2.2.0 (April 25, 2018)
+
+- Add custom element using `component` prop on `Row` or `Col`
+
+## 2.1.0 (April 09, 2018)
+
+- Add Server-Side Rendering.
+
 ## 2.0.7 (March 27, 2018)
 
 - Fix unexpected default `flex-wrap: nowrap` on Row component, flex wrap now defaults to `flex-wrap: wrap`.
