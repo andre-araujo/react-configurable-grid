@@ -26,7 +26,7 @@ function Col(props) {
   );
 }
 
-Row.defaultProps = {
+Col.defaultProps = {
   component: 'div',
   className: null
 };
