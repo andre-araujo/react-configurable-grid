@@ -1,3 +1,7 @@
+## 2.2.0 (April 25, 2018)
+
+- Add custom element using `component` prop on `Row` or `Col`
+
 ## 2.1.0 (April 09, 2018)
 
 - Add Server-Side Rendering.

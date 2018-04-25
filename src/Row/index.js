@@ -21,8 +21,10 @@ function Row(props) {
     }
   }
 
+  delete newProps.component;
+
   return (
-    React.createElement("div", Object.assign({}, newProps, { className: classes.join(" ") }), props.children)
+    React.createElement(props.component, Object.assign({}, newProps, { className: classes.join(" ") }), props.children)
   );
 }
 
@@ -30,6 +32,7 @@ Row.defaultProps = {
   wrap: 'wrap',
   align: 'stretch',
   justify: 'flex-start',
+  component: 'div',
   className: null
 };
 

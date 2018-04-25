@@ -4,7 +4,7 @@
 
 A simple configurable grid for react inspired on [grid-styled](https://github.com/jxnblk/grid-styled) and [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap) API, but, with open settings.
 
-**1.05k gz** only
+**1.06k gz** only
 
 ## Usage
 
@@ -159,21 +159,24 @@ export default class MyDocument extends Document {
 
 | prop | description | default |
 | --------- | ----------- | ----------- |
+| className | className | - |
+| component | changes base element | div |
 | wrap | flex-wrap | wrap |
 | align | align-items | stretch |
 | justify | justify-content | flex-start |
-| className | className | - |
+
 
 ### Col
 
 | prop | description |
 | --------- | ----------- |
+| className | className |
+| component | changes base element | div |
 | xs | extra small cols |
 | sm | small cols |
 | md | medium cols |
 | lg | large cols |
 | xl | extra large cols |
-| className | className |
 
 ### Configure grid
 

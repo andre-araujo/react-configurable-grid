@@ -2,7 +2,7 @@ import React from 'react';
 
 import configureGrid, { medias, gridStarted } from '../config';
 
-export default function Col(props) {
+function Col(props) {
   const classes = [
     'rcg-col',
     props.className
@@ -19,7 +19,16 @@ export default function Col(props) {
     }
   }
 
+  delete newProps.component;
+
   return (
-    React.createElement("div", Object.assign({}, newProps, { className: classes.join(" ") }), props.children)
+    React.createElement(props.component, Object.assign({}, newProps, { className: classes.join(" ") }), props.children)
   );
 }
+
+Row.defaultProps = {
+  component: 'div',
+  className: null
+};
+
+export default Col;
