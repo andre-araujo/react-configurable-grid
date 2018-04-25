@@ -1,3 +1,7 @@
+## 2.2.1 (April 25, 2018)
+
+- Fix default props for `Col` component
+
 ## 2.2.0 (April 25, 2018)
 
 - Add custom element using `component` prop on `Row` or `Col`
