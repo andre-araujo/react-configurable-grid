@@ -24,7 +24,7 @@ export default function configureGrid(configs = {}, returnTag) {
   }
 
   for (let i = 0; medias[i]; i++) {
-    if (configs[medias[i]]) {
+    if (configs[medias[i]] || configs[medias[i]] === null) {
       media[medias[i]] = configs[medias[i]]
     }
   }

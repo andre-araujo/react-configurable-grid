@@ -11,18 +11,21 @@ function gerenateColStyles() {
   const mediaKeys = Object.keys(media);
 
   for (let i = 0; mediaKeys[i]; i++) {
-    for (let j = 1; j <= 12; j++) {
-      const currentMedia = mediaKeys[i];
-      const currentValue = media[currentMedia];
-      const maxWidth = j / 12 * 100;
+    const currentMedia = mediaKeys[i];
+    const currentValue = media[currentMedia];
 
-      styles +=
-        '@media(min-width:' + currentValue +
-        '){.rcg-col-' + currentMedia + '-' + j +
-        '{max-width:' + maxWidth +
-        '%;-ms-flex-preferred-size:' + maxWidth +
-        '%;flex-basis:' + maxWidth +
-        '%}}';
+    if (currentValue !== null) {
+      for (let j = 1; j <= 12; j++) {
+        const maxWidth = j / 12 * 100;
+
+        styles +=
+          '@media(min-width:' + currentValue +
+          '){.rcg-col-' + currentMedia + '-' + j +
+          '{max-width:' + maxWidth +
+          '%;-ms-flex-preferred-size:' + maxWidth +
+          '%;flex-basis:' + maxWidth +
+          '%}}';
+      }
     }
   }
 

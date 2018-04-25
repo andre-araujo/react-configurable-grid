@@ -4,7 +4,7 @@
 
 A simple configurable grid for react inspired on [grid-styled](https://github.com/jxnblk/grid-styled) and [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap) API, but, with open settings.
 
-**1.06k gz** only
+**1.08 kB** only
 
 ## Usage
 
@@ -46,11 +46,11 @@ import configureGrid, { Row, Col } from 'react-configurable-grid';
 import OtherComponent from './OtherComponent';
 
 configureGrid({
-    xs: "0px",
+    // xs media query will use default value
     sm: "576px",
-    md: "768px",
+    md: null, // this media query will not be rendered
     lg: "992px",
-    xl: "1200px"
+    xl: null, // this media query will not be rendered
     gutter: "30px"
 });
 
@@ -181,6 +181,8 @@ export default class MyDocument extends Document {
 ### Configure grid
 
 Changes default values. Also returns styles for *server-side rendering*
+
+*Media queries with `null` value will not be rendered*
 
 Configuration Object param:
 
