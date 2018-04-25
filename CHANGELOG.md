@@ -1,3 +1,7 @@
+## 2.2.2 (April 25, 2018)
+
+- Disable media queries with `null` value
+
 ## 2.2.1 (April 25, 2018)
 
 - Fix default props for `Col` component
